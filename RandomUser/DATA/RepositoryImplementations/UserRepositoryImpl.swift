@@ -35,7 +35,6 @@ final class UserRepositoryImpl: UserRepository {
 
     func fetchNextUsers() async throws -> [User] {
         do {
-            print("page: \(nextPage)")
             let data = try await apiService.fetchUsers(results: 10,
                                                        page: nextPage,
                                                        seed: userSettings.seed)
