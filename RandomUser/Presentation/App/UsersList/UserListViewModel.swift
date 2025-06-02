@@ -42,7 +42,6 @@ final class UserListViewModel {
 
     func loadMoreUsersIfNeeded(currentIndex: Int) async {
         guard !isLoading && !isLoadingMoreUsers else { return }
-        print(currentIndex)
         guard currentIndex >= users.count - 4 else { return }
 
         isLoadingMoreUsers = true
